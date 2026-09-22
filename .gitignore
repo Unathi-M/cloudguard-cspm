@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environment
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+!*.tfvars.example
+
+# Generated data
+data/raw/*
+data/normalized/*
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep directory placeholders
+!data/raw/.gitkeep
+!data/normalized/.gitkeep
+
+# VS Code local settings
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
