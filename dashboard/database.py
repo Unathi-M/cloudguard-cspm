@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 import sqlite3
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any, Iterable, cast
 
 
 DEFAULT_DATABASE_PATH = Path("data/cloudguard.db")
@@ -146,7 +146,7 @@ def insert_scan_run(
         ),
     )
 
-    return int(cursor.lastrowid)
+    return cast(int, cursor.lastrowid)
 
 
 def upsert_findings(
