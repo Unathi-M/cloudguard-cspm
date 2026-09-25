@@ -72,3 +72,10 @@ The workflow:
 
 The insecure baseline is intentionally vulnerable and is configured as an informational scan. The remediated configuration is used as the security-quality gate.
 
+## CI security-gate decision
+
+Checkov scans for both Terraform environments currently run as informational CI steps.
+
+The insecure environment is intentionally vulnerable and is included to demonstrate baseline detection. The remediated environment has reduced failed checks from 25 to 7, but the remaining findings are documented in `reports/remediation-report.md`.
+
+The Python test suite and Terraform formatting checks remain blocking quality gates. As the remediated configuration improves, the Checkov scan can later be converted into a required security gate.
