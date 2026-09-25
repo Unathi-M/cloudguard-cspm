@@ -58,3 +58,17 @@ Normalized findings are loaded into a local SQLIte database at:
 
 ```text
 data/cloudguard.db
+
+## Continuous security validation
+
+GitHub Actions validates the project on pushes to `main` and on pull requests.
+
+The workflow:
+
+- Runs the Python test suite
+- Verifies Terraform formatting
+- Scans remediated Terraform with Checkov
+- Scans the intentionally insecure baseline for demonstration
+
+The insecure baseline is intentionally vulnerable and is configured as an informational scan. The remediated configuration is used as the security-quality gate.
+
