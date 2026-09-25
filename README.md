@@ -51,3 +51,10 @@ The normalizer can process both:
 - `data/raw/remediated-findings.json`
 
 The severity values are portfolio-level heuristic ratings, not official AWS or Checkov ratings. The project documents the heuristic so that the scoring is transparent and reproducible.
+
+## SQLite database
+
+Normalized findings are loaded into a local SQLIte database at:
+
+```text
+data/cloudguard.db
