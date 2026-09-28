@@ -141,3 +141,31 @@ python -m pytest -q
 ## Safety notice
 
 The Terraform configurations are intentionally insecure and are designed for local scanning only. They should not be deployed to a real AWS account without further review.
+
+## Architecture diagram
+
+The project architecture is:
+
+```mermaid
+flowchart TD
+    A[Terraform insecure configuration] --> C[Checkov scanner]
+    B[Terraform remediated configuration] --> C
+
+    C --> D[Raw JSON findings]
+    D --> E[Checkov normalizer]
+    E --> F[Normalized findings JSON]
+
+    F --> G[SQLite database]
+    G --> H[Streamlit dashboard]
+
+    H --> I[Metrics and posture score]
+    H --> J[Severity and category charts]
+    H --> K[Filterable findings table]
+    H --> L[Remediation comparison]
+
+    M[GitHub Actions] --> N[Pytest]
+    M --> O[Terraform formatting]
+    M --> C
+```
+
+![CloudGuard architecture](docs/architecture.png)

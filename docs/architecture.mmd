@@ -1,0 +1,19 @@
+flowchart TD
+    A[Terraform insecure configuration] --> C[Checkov scanner]
+    B[Terraform remediated configuration] --> C
+
+    C --> D[Raw JSON findings]
+    D --> E[Checkov normalizer]
+    E --> F[Normalized findings JSON]
+
+    F --> G[SQLite database]
+    G --> H[Streamlit dashboard]
+
+    H --> I[Metrics and posture score]
+    H --> J[Severity and category charts]
+    H --> K[Filterable findings table]
+    H --> L[Remediation comparison]
+
+    M[GitHub Actions] --> N[Pytest]
+    M --> O[Terraform formatting]
+    M --> C
