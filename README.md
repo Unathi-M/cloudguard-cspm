@@ -1,4 +1,9 @@
 # CloudGuard CSPM Dashboard
+[![Security Validation](https://github.com/Unathi-M/cloudguard-cspm/actions/workflows/security.yml/badge.svg )](https://github.com/Unathi-M/cloudguard-cspm/actions )
+[![Python Tests](https://img.shields.io/badge/tests-9%20passing-brightgreen )](https://github.com/Unathi-M/cloudguard-cspm )
+[![Terraform](https://img.shields.io/badge/Terraform-IaC-purple )](https://www.terraform.io/ )
+[![Checkov](https://img.shields.io/badge/Checkov-security%20scanning-blue )](https://www.checkov.io/ )
+
 
 CloudGuard is a local cloud security posture management dashboard that identifies and prioritizes security misconfigurations in Terraform infrastructure code.
 
@@ -169,3 +174,26 @@ flowchart TD
 ```
 
 ![CloudGuard architecture](docs/architecture.png)
+
+## Dashboard preview
+
+![CloudGuard dashboard](docs/dashboard-preview.png)
+![CloudGuard dashboard](docs/dashboard-preview2.png)
+![CloudGuard dashboard](docs/dashboard-preview3.png)
+![CloudGuard dashboard](docs/dashboard-preview4.png)
+![CloudGuard dashboard](docs/dashboard-preview5.png)
+
+## Demonstrated skills
+
+- Cloud security posture management
+- Infrastructure-as-code security
+- Terraform security review
+- Checkov static analysis
+- Security finding normalization
+- Risk prioritization
+- Python automation
+- SQLite data modeling
+- Streamlit dashboard development
+- GitHub Actions CI
+- Security documentation
+- Remediation analysis
